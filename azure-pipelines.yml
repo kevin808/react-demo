@@ -36,7 +36,7 @@ steps:
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.SourcesDirectory)/server'
+    rootFolderOrFile: '$(Build.SourcesDirectory)/server1'
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
@@ -44,6 +44,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/server'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/server2'
     ArtifactName: 'drop'
     publishLocation: 'Container'
