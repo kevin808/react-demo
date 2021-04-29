@@ -19,6 +19,8 @@ steps:
     cd client
     npm install
     npm run build
+    mkdir $(Build.SourcesDirectory)/server1
+    mkdir $(Build.ArtifactStagingDirectory)/server2
   displayName: 'npm install and build'
 
 - task: CopyFiles@2
